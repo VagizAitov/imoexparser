@@ -18,15 +18,15 @@ export default function Profile() {
   const [numberPosts, setNumberPosts] = useState(0)
 
   useEffect(() => {
-    axios.get(`http://localhost:8082/users/${login}`)
+    axios.get(`http://45.67.59.245:8082/users/${login}`)
     .then(res => {setData(res.data[0])
-      axios.get(`http://localhost:8082/liked/${res.data[0].id}`)
+      axios.get(`http://45.67.59.245:8082/liked/${res.data[0].id}`)
       .then(res => {
         console.log(res.data)
         setNumberPosts(res.data.length)
         const length = res.data.length
         for(let i = 0; i< res.data.length; i++){
-          axios.get(`http://localhost:8082/posts/${res.data[i].iduser,res.data[i].idpost}`)
+          axios.get(`http://45.67.59.245:8082/posts/${res.data[i].iduser,res.data[i].idpost}`)
           .then(res => {
             if(final.length >= length){
               return

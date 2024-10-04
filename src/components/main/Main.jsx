@@ -13,7 +13,7 @@ export default function Main() {
     if(localStorage.getItem('token') == ''){
       nav('/login')
     }
-    axios.get(`http://localhost:8082/users/${JSON.parse(localStorage.getItem('token')).login}`)
+    axios.get(`http://45.67.59.245:8082/users/${JSON.parse(localStorage.getItem('token')).login}`)
     .then(res => {
       if(res.data[0] == undefined){
         localStorage.setItem('token', '')

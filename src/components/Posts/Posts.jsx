@@ -7,7 +7,7 @@ import classes from './posts.module.scss'
 export default function Posts() {
     const [posts, setPosts] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8082/posts')
+        axios.get('http://45.67.59.245:8082/posts')
         .then(res => setPosts(res.data))
         .catch(err => console.log(err))
     }, [])

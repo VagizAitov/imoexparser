@@ -14,16 +14,16 @@ export default function Post() {
 
     const like = () => {
       setisLiked((isLiked == true) ? false : true)
-      axios.get(`http://localhost:8082/liked/${userId}/${post.id}`)
+      axios.get(`http://45.67.59.245:8082/liked/${userId}/${post.id}`)
       .then(res => {
         if(res.data.length == 0){
-          axios.post('http://localhost:8082/liked', {
+          axios.post('http://45.67.59.245:8082/liked', {
             iduser: userId,
             idpost: post.id
           })
           .then(res => console.log(res))
         } else{
-          axios.delete('http://localhost:8082/liked', {
+          axios.delete('http://45.67.59.245:8082/liked', {
             data: {
               iduser: userId,
               idpost: post.id
@@ -36,9 +36,9 @@ export default function Post() {
       .catch(err => console.log(err))
     }
     useEffect(() => {
-        axios.get(`http://localhost:8082/posts/${params.idpost}`)
+        axios.get(`http://45.67.59.245:8082/posts/${params.idpost}`)
         .then(res => {setPost(res.data[0])
-          axios.get(`http://localhost:8082/liked/${userId}/${res.data[0].id}`)
+          axios.get(`http://45.67.59.245:8082/liked/${userId}/${res.data[0].id}`)
           .then(res => ((res.data.length == 0) ? setisLiked(false) : setisLiked(true)))
           .catch(err => console.log(err))
         })

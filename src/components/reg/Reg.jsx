@@ -19,12 +19,12 @@ export default function Reg() {
 
 
   const submit = () => {
-    axios.get(`http://localhost:8082/users/${login}`)
+    axios.get(`http://45.67.59.245:8082/users/${login}`)
     .then(res => {
       console.log(res)
       if(res.data.length == 0){
         const id = Date.now()
-        axios.post('http://localhost:8082/users', {
+        axios.post('http://45.67.59.245:8082/users', {
           id: id,
           pass: pass,
           login: login,
@@ -37,7 +37,8 @@ export default function Reg() {
           login: login,
           pass: pass
         }))
-        nav('/')
+        alert("Вы зарегистрировались")
+        nav(`/profile/${id}`)
       }else{
         console.log('This login already exist')
       }

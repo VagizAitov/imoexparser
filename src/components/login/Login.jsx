@@ -22,7 +22,7 @@ export default function Login() {
 
 
   const submit = () => {
-    axios.get(`http://localhost:8082/users/${login}`)
+    axios.get(`http://45.67.59.245:8082/users/${login}`)
     .then(res => {
       if(res.data[0] == undefined){
         alert('Неверный логин ил пароль')
@@ -34,7 +34,7 @@ export default function Login() {
             pass: password
           }))
           alert('Вы вошли')
-          nav('/posts')
+          nav(`/profile/${res.data[0].id}`)
         }
       }
     })

@@ -11,7 +11,7 @@ export default function AddPost() {
     const [userId, setUserId] = useState(JSON.parse(localStorage.getItem('token')).id)
 
     const submit = () => {
-        axios.post('http://localhost:8082/posts', {
+        axios.post('http://45.67.59.245:8082/posts', {
             id: Date.now(),
             iduser: userId,
             title: title,
