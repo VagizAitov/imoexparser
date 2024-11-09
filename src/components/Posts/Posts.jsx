@@ -13,7 +13,6 @@ export default function Posts() {
     }, [])
     return (
         <div>
-            <Nav/>
             <div className={classes.main}>
                 <div>
                     <Link to='/add-post'>Add new post</Link>

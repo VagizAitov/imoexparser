@@ -1,69 +1,122 @@
-.main {
-    display: grid;
-    justify-content: center;
-    padding-top: 100px;
-}
-.profilePicture {
-    background-color: #d6d6d6;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    overflow: hidden;
-    img {
-        transform: translateX(-5px);
-    }
-    margin-top: 5px;
-}
-.profileWrapper {
-    background-color: rgb(66, 133, 120);
-    padding: 15px;
-    width: 400px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
-    p {
-        color: white !important;
-        font-family: "Poppins", sans-serif;
-        font-style: normal;
-    }
-}
-.profileInfo {
-
-    display: grid;
-    grid-template-columns: 50px 1fr;
-}
-
 .wrapper {
-    margin-top: 10px;
-    display: grid;
-    background-color: rgb(66, 133, 120);
-    border-radius: 15px;
-    width: 400px;
-    padding: 15px;
-    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
-    ul {
-        list-style-type: none;
-    }
+  height: 80vh;
+  padding-top: 100px;
+  width: 100vw;
+  grid-template-rows: 1fr;
+  grid-template-columns: 70%;
+  display: grid;
+  justify-content: center;
 }
-
-.title {
-    font-weight: 600;
-    font-size: 18px;
-    color: white !important;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
+.main {
+  display: grid;
+  grid-template-rows: 170px 100px 50px 1fr;
+  grid-gap: 10px;
+  .infoBox {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 130px 1fr;
+    border: 2px solid #d9d9d9;
+    border-radius: 13px;
+    width: 100%;
+    .pp {
+      height: 90px;
+      width: 90px;
+      border-radius: 13px;
+      margin-left: 20px;
+    }
+    .info {
+      .id {
+        font-family: Gilroy-medium;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 24.66px;
+        color: #d9d9d9;
+      }
+      .name {
+        font-family: Gilroy-bold;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 24.66px;
+        color: #464646;
+      }
+    }
+  }
+  .incomeStats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    .statName {
+      font-family: Gilroy-bold;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24.66px;
+      color: #464646;
+    }
+    .statInfo {
+      font-family: Gilroy-medium;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24.66px;
+      color: #7a7a7a;
+    }
+    .cost {
+      display: grid;
+      grid-gap: 5px;
+      align-content: center;
+      padding: 10px;
+      border: 2px solid #d9d9d9;
+      border-radius: 13px;
+    }
+    .income {
+      display: grid;
+      grid-gap: 5px;
+      align-content: center;
+      padding: 10px;
+      border: 2px solid #d9d9d9;
+      border-radius: 13px;
+    }
+    .incomePercent {
+      display: grid;
+      grid-gap: 5px;
+      align-content: center;
+      padding: 10px;
+      border: 2px solid #d9d9d9;
+      border-radius: 13px;
+    }
+  }
+  .sharesOrBonds {
+    display: flex;
     a {
-        text-decoration: none;
-        color: white !important;
+      font-family: Gilroy-bold;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 24.66px;
+      color: #464646;
     }
     a:hover {
-        text-decoration: underline;
+      cursor: pointer;
     }
-    a:visited {
-        color: white !important;
+    .curr {
+      border-bottom: 2px solid #464646;
     }
-}
-.text {
-    color: white !important;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
+  }
+  .alldata {
+    ul {
+      li {
+        display: grid;
+        align-content: center;
+        grid-template-columns: 500px 1fr 1fr 1fr 1fr 1fr;
+        border-bottom: 1px solid #e6e6e6;
+        height: 36px;
+        p {
+          font-family: Gilroy-light;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 13.97px;
+          color: #464646;
+        }
+      }
+    }
+  }
 }
